@@ -10,6 +10,8 @@ These charts show which states are tweeting the most about COVID-19, which state
 
 ![Do people tweet more when cases rise?](https://github.com/daviddecorso/covid-tweet-viz/blob/master/Do%20people%20tweet%20more%20when%20cases%20rise.png)
 
+![COVID-19 cases vs daily tweets](https://github.com/daviddecorso/covid-tweet-viz/blob/master/Tweets%20vs%20daily%20cases.png)
+
 These graphs show the amount of tweets per day plotted against the number of new cases per day to see if tweets correlated with new cases. There seems not to be any correlation between tweets and cases, even if the tweets are compared to the previous day's cases.
 
 For further analysis I would like to compare weekly averages of tweets and cases over a longer period of time to see if a larger correlation is present. Unless an extremely large spike in cases occurs, I wouldn't think it likely for many more people to be tweeting about COVID than the day before due to case numbers. News stories from influential people or outlets are much more likely to have an effect on day-to-day numbers. Unfortunately, the COVID-19 tweets dataset used in this project only has tweets from July 15th and later making a longer-term averaged analysis impossible to carry out with this data.
