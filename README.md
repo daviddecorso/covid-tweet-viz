@@ -26,4 +26,18 @@ For further analysis I would like to compare weekly averages of tweets and cases
 
 ## Process & Methodology
 
-Section will be added soon.
+### Cleaning:
+
+The COVID-19 tweets dataset needed the most cleaning of the datasets used in this project. Twitter has an option for users to display their location on their profile, but the location is merely a text box where users can input anything they wish, or nothing at all. Therefore the user location column needed quite a bit of cleaning to be usable for this project. Below is a sample of user location data from the dataset. None of the data is standardized, although much of it is usable with some cleaning (like rows 3, 4, 8, etc.). Some of the data is completely unusable (rows 2, 5, 7, 9, etc.) and must be removed if location is being considered.
+
+
+
+To clean the location data I first dropped all rows with no data. This left a large dataset of ~70,000 items. Then, I converted all city/state locations (i.e. Orlando, FL) to just their abbreviations. Next I dropped all unique locations, since these are likely unusable (an example would be row 14 from the above image). Next, I converted all locations in the format "State, US/USA/United States" to the abbreviation of the state. I chose not to just keep state names in the location field that aren't formatted, since someone could set their location as "I used to live in Florida," for example. They likely don't live in Florida, but this approach would count them as living in Florida. Since the dataset is very messy I decided to be as sure as possible of a user's location. This left me with about 13,000 tweets from the United States. I also changed the date format from MM:DD:YYYY, HH:MM to MM:DD:YYYY.
+
+For the daily data I summed all of the tweets of a certain date from the USA and Global datasets and compared them with COVID-19 cases from the US and World COVID-19 datasets.
+
+### Methodology:
+
+To find the amount states tweeted relative to the amount of cases they had, I divided the number of tweets by the number of cases in each state.
+
+For the daily data comparing tweets to amount of new cases, I plotted the two against each other in a scatter plot and checked for any correlation. Days with more new cases didn't necessarily have more COVID-related tweets for the US and Global data. As I previously mentioned, I would like to have done a longer-term look at this to see if a correlation manifests, but I couldn't find a usable longer-term dataset.
