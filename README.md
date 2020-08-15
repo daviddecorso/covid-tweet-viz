@@ -18,7 +18,11 @@ For further analysis I would like to compare weekly averages of tweets and cases
 
 ## Data Sources
 
-Section will be added soon.
+**[COVID-related tweets dataset](https://www.kaggle.com/gpreda/covid19-tweets)**
+
+**[United States COVID dataset](https://github.com/nytimes/covid-19-data)**
+
+**[World COVID dataset](https://ourworldindata.org/covid-cases)**
 
 ## Process & Methodology
 
