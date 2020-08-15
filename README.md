@@ -24,13 +24,13 @@ For further analysis I would like to compare weekly averages of tweets and cases
 
 **[World COVID dataset](https://ourworldindata.org/covid-cases)**
 
-## Process & Methodology
+## Cleaning & Methodology
 
 ### Cleaning:
 
 The COVID-19 tweets dataset needed the most cleaning of the datasets used in this project. Twitter has an option for users to display their location on their profile, but the location is merely a text box where users can input anything they wish, or nothing at all. Therefore the user location column needed quite a bit of cleaning to be usable for this project. Below is a sample of user location data from the dataset. None of the data is standardized, although much of it is usable with some cleaning (like rows 3, 4, 8, etc.). Some of the data is completely unusable (rows 2, 5, 7, 9, etc.) and must be removed if location is being considered.
 
-
+![Raw user location data from COVID-19 tweets dataset](https://github.com/daviddecorso/covid-tweet-viz/blob/master/readme_images/dirty%20tweet%20location%20data.PNG)
 
 To clean the location data I first dropped all rows with no data. This left a large dataset of ~70,000 items. Then, I converted all city/state locations (i.e. Orlando, FL) to just their abbreviations. Next I dropped all unique locations, since these are likely unusable (an example would be row 14 from the above image). Next, I converted all locations in the format "State, US/USA/United States" to the abbreviation of the state. I chose not to just keep state names in the location field that aren't formatted, since someone could set their location as "I used to live in Florida," for example. They likely don't live in Florida, but this approach would count them as living in Florida. Since the dataset is very messy I decided to be as sure as possible of a user's location. This left me with about 13,000 tweets from the United States. I also changed the date format from MM:DD:YYYY, HH:MM to MM:DD:YYYY.
 
